@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@500&display=swap');
+
+/* -----------------------------------------------------------------------
+                             Declarar variable
+   ----------------------------------------------------------------------- */
+
+:root {
+    /* Paleta de colores */
+    --color-blanco:#fff;
+    --color-negro:#000;
+    --color-azul:#3079d9;
+    --color-grisoscuro:#454545;
+    --color-celesteclaro:#d0dff2;
+
+    /* Tipos de letra */
+    --fuente-principal: 'Poppins', sans-serif;
+}
+
+/* -----------------------------------------------------------------------
+                  Selector universal de toda la pagina 
+   ----------------------------------------------------------------------- */
+* {
+    /* Quita el margen y espaciado predeterminado */
+    margin: 0px;
+    padding: 0px;
+} 
+
+/* -----------------------------------------------------------------------
+                  Selectores de estilo de tipo HTML 
+   ----------------------------------------------------------------------- */
+body {
+    font-family: var(--fuente-principal) /* tipo de letra */
+}
+
+h1 {
+    /* text-align: ----> posicion del texto */
+    font-size: 48px; /* Tamaño de letra */
+    font-weight: 900; /* Grosor de la letra */
+}
+
+
+h2 {
+    font-size: 36px;
+    font-weight: 200;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 600;
+    padding-bottom: 5px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5; /* Interlineado */
+    padding-bottom: 10px;
+
+    /* text-align: justify */ /* opcional no recomendado */
+}
+
+/* -----------------------------------------------------------------------
+    Selectores de estilo de tipo ID */ /* Solo se puede llamar una sola vez
+   ----------------------------------------------------------------------- */
+
+#cabecera { /* Regla de estilo */
+
+    background-color: rgb(80, 158, 80);; /* Color de fondo */
+    color: var(--color-azul); /* Color del texto */
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    /* Posicionamiento pegajoso "stiky" */
+    position: sticky;
+
+    /* coordenadas */
+    top: 0px;
+
+    /* Traer la cabecera encima de los otros elementos */
+    z-index: 1000;
+   
+}
+
+#nosotros {
+    color: var(--color-negro);
+
+    background-image: url(../imagenes/fondo1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll; /* La imagen se queda fija al hacer scroll */ /* opcional */
+    background-position: top;
+    height: 400px;
+
+}
+
+#nosotros h2 {
+    text-align: left;
+    font-weight: 500;
+}
+
+#servicios {
+    background-color: rgb(60, 112, 60);
+    color: var(--color-blanco);
+}
+
+#servicios img {
+    border-radius: 50%;
+    width: 400px;
+    margin-left: 15%;
+}
+
+#servicios h3 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#eventos {
+    /* background-color: var(--color-blanco); */
+    background-color: var(--color-grisoscuro);
+    
+    background: linear-gradient(140deg,#ffffff 0%, #eaffea 80%);
+}
+
+#eventos>.contenedor>.row>.columna {
+
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 10px;
+    border: 2px solid rgba(48, 121, 217, 0.1); 
+    box-shadow: 0 15px 20px 0 rgb(32 54 70 / 20%) !important;
+
+}
+
+#eventos img {
+    transition: all 0.5s ease-in-out;
+}
+
+
+
+#graduacion {
+    background-image: url("../imagenes/bosque.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom; /* Resalta el area especificada de una imagen */
+    background-attachment: fixed; /* La imagen se queda fija al hacer scroll */ /* opcional */
+    height: 400px;
+}
+
+#graduacion p {
+    color: #ffffff;
+    font-weight: 300;
+    background-color: rgba(69, 69, 69, 0.616);
+
+    text-align: center;
+}
+
+#carreras {
+    background-color: var(--color-blanco);
+    color: var(--color-grisoscuro);
+}
+
+#carreras ul {
+    list-style-type: circle; /* disc, square, circle */
+}
+
+#carreras ol {
+    list-style-type: upper-roman;
+}
+
+#admision {
+    background-color: var(--color-celesteclaro);
+    color: var(--color-grisoscuro);
+}
+
+#investigaciones {
+    background-color: var(--color-celesteclaro);
+    color: var(--color-grisoscuro);
+}
+
+#conferencia {
+    background-color: var(--color-grisoscuro);
+    color: var(--color-blanco);
+}
+
+#conferencia img {
+    filter: grayscale(80%);
+}
+
+.conferencia-foto {
+    position: relative;
+}
+
+.conferencia-foto-descripcion {
+    background-color: var(--color-grisoscuro);
+    width: 300px;
+    position: absolute;
+
+    /* coordenadas de ubicacion */
+    left: calc(50% - 150px); /* centrar el objeto */
+    bottom: 20px;
+}
+
+
+#proyectos {
+    background-color: var(--color-blanco);
+    color: var(--color-grisoscuro);
+}
+
+#servicios img {
+    transition: all 0.5s ease-in-out;
+}
+
+#servicios img:hover {
+    filter: grayscale(100%);
+}
+
+.mover-derecha:hover {
+    transform: translateX(10px);
+}
+
+.agrandar5:hover {
+    transform: scale(105%);
+}
+
+.mover-izquierda:hover {
+    transform: translateX(-10px);
+}
+
+.caja-overflow {
+    overflow: hidden;
+}
+
+/* -----------------------------------------------------------------------
+    Selectores de estilo de tipo CLASS */ /* Se puede llamar varias veces
+   ----------------------------------------------------------------------- */
+
+.espaciado { /* paddet (ingles) */
+    padding-top: 90px; /* Espaciado superior e inferior entre el borde y el contenido*/
+    padding-bottom: 90px; /* Espaciado inferior e superior entre el borde y el contenido*/
+}
+
+.contenedor { /* container (ingles) */
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.row {
+    display: flex; /* Flexbox */
+    flex-direction: row; /* Los elementos hijo se ponen en fila */
+
+    /* Eliminar el espacio producido por el padding de las columnas */
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.columna {
+    flex-basis: 0%; /* Elimina el ancho de la caja */
+    flex-grow: 1; /* Agranda la caja */
+
+    /* Espacio entre el borde la columna y el contenido */
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.img_ajustarancho {
+    width: 100%;
+    height: auto;
+}
+
+.columna-75 {
+    flex-basis: 75%;
+    max-width: 75%;
+}
+
+.columna-50 {
+    flex-basis: 50%;
+    max-width: 50%;
+}
+
+.columna-33 {
+    flex-basis: 33.33%;
+    max-width: 33.33%;
+}
+
+.columna-25 {
+    flex-basis: 25%;
+    max-width: 25%;
+}
+
+.texto-enorme {
+    font-size: 50px;
+    font-weight: 200;
+    line-height: 1.5;
+}
+
+.texto-resaltar {
+    color: #4df323;
+    font-weight: 900;
+}
+
+/* -------------------------------------- 
+       Estilos para la barra de menu 
+   -------------------------------------- */
+
+.logo {
+    width: 150px;
+    padding-left: 46%;
+}
+
+.menu-barra {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-opciones {
+    list-style-type: none;
+}
+
+.menu-opciones a {
+    text-decoration: none;
+    color: var(--color-blanco);
+    
+}
+
+.menu-items {
+    display: flex;
+    flex-direction: row;
+    font-size: 18px;
+}
+
+.menu-items li {
+    padding: 15px 15px;
+    border-bottom: transparent 3px solid;
+    transition: all 0.4s ease-in-out;
+}
+
+.menu-items li:hover {
+    border-bottom: rgb(255, 255, 255) 3px solid;
+}
+
+/* -------------------------------------------- 
+       Clase para la pagina en construccion 
+   -------------------------------------------- */
+
+.construccion {
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.barra-ubicacion {
+    background-color: rgba(69, 69, 69, 0.6);
+    color: var(--color-blanco);
+    text-align: center;
+}
+
+.texto-columnas {
+    column-count: 4;
+    column-gap: 30px;
+    column-rule: 2px dotted #000000;
+}
+
+
+
